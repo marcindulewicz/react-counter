@@ -1,0 +1,13 @@
+.main_div {
+   margin: 0 auto;
+   width: 30%;
+   margin-top: 20px;
+}
+.bolded {
+    font-weight: 900;
+    margin-left: 15px;
+}
+.licznik_liczba {
+    color: blue;
+    font-weight: 900;
+}
