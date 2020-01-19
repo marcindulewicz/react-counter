@@ -9,8 +9,7 @@ function App() {
     <div className="App">
 
       <Counter initValue='110' />
-      <Counter initValue='111' />
-
+   
     </div>
   );
 }

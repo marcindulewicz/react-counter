@@ -19,7 +19,8 @@ class Counter extends Component {
         }
         this.state = {
             counterView: number,
-            counterViewInitiale: number
+            counterViewInitiale: number,
+            krok: 1
         }
     }
     resetCounter = () => {
@@ -32,14 +33,14 @@ class Counter extends Component {
 
         if (this.state.counterView == 0) {
             this.setState({
-                counterView: this.state.counterView + 1,
-                counterInitiale: this.state.counterView + 1
+                counterView: this.state.counterView + this.state.krok,
+                counterInitiale: this.state.counterView + this.state.krok
             })
         }
         else {
             this.setState({
-                counterView: this.state.counterView + 1,
-                counterInitiale: this.state.counterInitiale + 1
+                counterView: this.state.counterView + this.state.krok,
+                counterInitiale: this.state.counterInitiale + this.state.krok
             })
         }
 
@@ -57,8 +58,15 @@ class Counter extends Component {
 
         })
     }
+    resetProps = () =>  {
+        this.setState({
+            krok: parseInt(document.getElementById('inputer').value)
+            
 
-
+        })
+    }
+  
+    
 
 
     render() {
@@ -67,7 +75,9 @@ class Counter extends Component {
             <div className='main_div'>
                 <Card>
                     <Card.Body ><span className="bolded">Licznik:</span><span className="licznik_liczba"> {this.state.counterView}</span>
-                        <Button3  resetToPropsProps = {this.resetToProps}comeBackProps={this.comeBack} addCounterProps={this.addCounter} resetCounteProps={this.resetCounter} />
+                        <Button3   resetToPropsProps = {this.resetToProps}comeBackProps={this.comeBack} addCounterProps={this.addCounter} resetCounteProps={this.resetCounter} />
+                    <br></br>
+                    <input id='inputer' type='number' onChange={this.resetProps}></input>
                     </Card.Body>
                 </Card>
                 

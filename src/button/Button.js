@@ -19,7 +19,7 @@ class Button3 extends Component {
 const Button3 = (props) => {
     return (
         <div>
-            <Button variant="primary" className='marginy' onClick = {props.addCounterProps}>Dodaj +1</Button>
+            <Button variant="primary" className='marginy' onClick = {props.addCounterProps}>Dodaj</Button>
             <Button variant="warning" className='marginy' onClick = {props.comeBackProps}>Resetuj do poprzedniej</Button>
             <Button variant="danger" className='marginy' onClick = {props.resetCounteProps}>Resetuj do zera</Button>
             <Button variant="info" className='marginy' onClick = {props.resetToPropsProps}>Resetuj do propsa</Button>
