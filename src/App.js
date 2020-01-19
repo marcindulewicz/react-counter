@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Btn from './button.js'
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
         >
           Learn React
         </a>
+        <Btn napis1="Jestem pierwszy"/>
+        <Btn napis1="Jestem drugi"/>
       </header>
+      
     </div>
   );
 }
